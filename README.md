@@ -1,46 +1,4 @@
-<img src="docs/\_static/img/logo.png" align="right" width="40%"/>
-
-[![Build Status](https://travis-ci.com/hill-a/stable-baselines.svg?branch=master)](https://travis-ci.com/hill-a/stable-baselines) [![Documentation Status](https://readthedocs.org/projects/stable-baselines/badge/?version=master)](https://stable-baselines.readthedocs.io/en/master/?badge=master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3bcb4cd6d76a4270acb16b5fe6dd9efa)](https://www.codacy.com/app/baselines_janitors/stable-baselines?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hill-a/stable-baselines&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/3bcb4cd6d76a4270acb16b5fe6dd9efa)](https://www.codacy.com/app/baselines_janitors/stable-baselines?utm_source=github.com&utm_medium=referral&utm_content=hill-a/stable-baselines&utm_campaign=Badge_Coverage)
-
-# Stable Baselines
-
-Stable Baselines is a set of improved implementations of reinforcement learning algorithms based on OpenAI [Baselines](https://github.com/openai/baselines/).
-
-You can read a detailed presentation of Stable Baselines in the [Medium article](https://medium.com/@araffin/stable-baselines-a-fork-of-openai-baselines-reinforcement-learning-made-easy-df87c4b2fc82).
-
-
-These algorithms will make it easier for the research community and industry to replicate, refine, and identify new ideas, and will create good baselines to build projects on top of. We expect these tools will be used as a base around which new ideas can be added, and as a tool for comparing a new approach against existing ones. We also hope that the simplicity of these tools will allow beginners to experiment with a more advanced toolset, without being buried in implementation details.
-
-**Note: despite its simplicity of use, Stable Baselines (SB) assumes you have some knowledge about Reinforcement Learning (RL).** You should not utilize this library without some practice. To that extent, we provide good resources in the [documentation](https://stable-baselines.readthedocs.io/en/master/guide/rl.html) to get started with RL.
-
-## Main differences with OpenAI Baselines
-
-This toolset is a fork of OpenAI Baselines, with a major structural refactoring, and code cleanups:
-- Unified structure for all algorithms
-- PEP8 compliant (unified code style)
-- Documented functions and classes
-- More tests & more code coverage
-- Additional algorithms: SAC and TD3 (+ HER support for DQN, DDPG, SAC and TD3)
-
-
-| **Features**                | **Stable-Baselines**              | **OpenAI Baselines**              |
-| --------------------------- | --------------------------------- | --------------------------------- |
-| State of the art RL methods | :heavy_check_mark: <sup>(1)</sup> | :heavy_check_mark:                |
-| Documentation               | :heavy_check_mark:                | :x:                               |
-| Custom environments         | :heavy_check_mark:                | :heavy_check_mark:                |
-| Custom policies             | :heavy_check_mark:                | :heavy_minus_sign: <sup>(2)</sup> |
-| Common interface            | :heavy_check_mark:                | :heavy_minus_sign: <sup>(3)</sup> |
-| Tensorboard support         | :heavy_check_mark:                | :heavy_minus_sign: <sup>(4)</sup> |
-| Ipython / Notebook friendly | :heavy_check_mark:                | :x:                               |
-| PEP8 code style             | :heavy_check_mark:                | :heavy_check_mark: <sup>(5)</sup> |
-| Custom callback             | :heavy_check_mark:                | :heavy_minus_sign: <sup>(6)</sup> |
-
-<sup><sup>(1): Forked from previous version of OpenAI baselines, with now SAC and TD3 in addition</sup></sup><br>
-<sup><sup>(2): Currently not available for DDPG, and only from the run script. </sup></sup><br>
-<sup><sup>(3): Only via the run script.</sup></sup><br>
-<sup><sup>(4): Rudimentary logging of training information (no loss nor graph). </sup></sup><br>
-<sup><sup>(5): EDIT: you did it OpenAI! :cat:</sup></sup><br>
-<sup><sup>(6): Passing a callback function is only available for DQN</sup></sup><br>
+I've added seed number randomisation selection for the stable-baselines repository, to investigate the effects of undifferentiating randomisation on overfitting and memorization in deep reinforcement learning.
 
 ## Documentation
 
